@@ -1,7 +1,19 @@
+import { useState } from "react";
+import Hompage from "./pages/Hompage";
+import WelcomePage from "./pages/Welcomepage";
+import { Route, Routes } from "react-router-dom";
+
 function App() {
+  const [isloaded, setisloaded] = useState(true);
   return (
     <>
-      <h1 className="text-[3rem]">Hello world</h1>
+      {isloaded ? (
+        <WelcomePage onloadcomplete={setisloaded} />
+      ) : (
+        <Routes>
+          <Route path="/" element={<Hompage />} />
+        </Routes>
+      )}
     </>
   );
 }
