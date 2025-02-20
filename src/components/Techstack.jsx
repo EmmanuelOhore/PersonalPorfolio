@@ -2,7 +2,7 @@ const TechStackList = () => {
   const techData = ["React", "JavaScript", "Tailwind", "Firebase"];
 
   return (
-    <div className="flex py-4 gap-6">
+    <div className="flex py-2 gap-6">
       {techData.map((tech, index) => (
         <div
           data-aos="fade-right"

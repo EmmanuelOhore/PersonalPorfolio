@@ -1,6 +1,10 @@
 const ProjectsContacts = () => {
   return (
-    <div className="projects-contacts flex gap-8  mt-4 p-1  ">
+    <div
+      data-aos="fade-up"
+      data-aos-delay="400"
+      className="projects-contacts flex gap-8  mt-2 p-1 "
+    >
       <div className="relative group">
         <span className="absolute inset-0 scale-x-0 origin-left bg-gray-500/10 rounded-md  group-hover:scale-x-100 transition-transform duration-300 ease-in-out z-40 "></span>
         <span className="absolute  -inset-2 bg-gradient-to-r from-cyan-400 to-blue-500  opacity-20 blur-[10px] rounded-lg"></span>

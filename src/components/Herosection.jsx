@@ -4,6 +4,7 @@ import TypeWriterSec from "./TypeWriter";
 import MainText from "./mainText";
 import AnimateDo from "./DoLitteanimate";
 import ProjectsContacts from "./ProjectsContactys";
+import Socails from "./socailslinks";
 
 const MainSection = () => {
   return (
@@ -13,10 +14,15 @@ const MainSection = () => {
         <MainText />
         <TypeWriterSec />
         <TechStackList />
-
         <ProjectsContacts />
+        <Socails />
       </div>
-      <div className="w-[60%] mt-[2rem] ">
+      <div
+        data-aos="fade-up"
+        data-aos-offset="100"
+        data-aos-delay="400"
+        className="w-[60%] mt-[2rem] "
+      >
         <AnimateDo />
       </div>
     </main>
