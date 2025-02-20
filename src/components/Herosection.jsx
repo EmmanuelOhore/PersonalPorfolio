@@ -13,6 +13,7 @@ const MainSection = () => {
         <MainText />
         <TypeWriterSec />
         <TechStackList />
+
         <ProjectsContacts />
       </div>
       <div className="w-[60%] mt-[2rem] ">
