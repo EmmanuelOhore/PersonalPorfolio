@@ -22,9 +22,6 @@ function PorfolioPage() {
       {/* portfolio section */}
 
       <PortfolioProjects />
-      <section className="mt-10">
-        <Outlet />
-      </section>
     </main>
   );
 }
