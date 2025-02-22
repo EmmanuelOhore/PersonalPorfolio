@@ -45,7 +45,7 @@ function AboutMe() {
     Aos.init({ duration: 1000 });
   }, []);
   return (
-    <main className=" pt-[6rem] h-[200vh] ">
+    <main className=" pt-[6rem]  ">
       <header className="flex flex-col  text-center">
         <h1
           data-aos="fade-up"

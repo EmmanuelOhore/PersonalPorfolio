@@ -2,6 +2,7 @@ import AboutMe from "../components/AboutMe";
 import AnimatedBackground from "../components/AnimimatedBackgrounmd";
 import MainSection from "../components/Herosection";
 import NavBar from "../components/NavBar";
+import PorfolioPage from "./PorfolioPage";
 function Hompage() {
   return (
     <div className=" bg-[#030014] ">
@@ -9,6 +10,7 @@ function Hompage() {
       <NavBar />
       <MainSection />
       <AboutMe />
+      <PorfolioPage />
     </div>
   );
 }
