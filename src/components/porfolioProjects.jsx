@@ -26,7 +26,7 @@ const PortfolioProjects = () => {
     },
   ];
   return (
-    <section className="flex flex-col items-center  mt-10 ">
+    <section className="flex flex-col items-center  mt-10 h-[300vh] ">
       <nav className="border border-1 border-gray-500/40 flex w-[80%] rounded-[1rem] overflow-hidden">
         <ul className="  w-full py-2 px-4  flex justify-between">
           {navData.map((item, index) => {

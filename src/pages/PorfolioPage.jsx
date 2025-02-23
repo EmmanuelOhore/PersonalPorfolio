@@ -1,7 +1,6 @@
-import { Outlet } from "react-router-dom";
 import PortfolioProjects from "../components/porfolioProjects";
 
-function PorfolioPage() {
+function PorfolioHeader() {
   return (
     <main className="pt-[6rem] flex flex-col ">
       <section className="flex flex-col ">
@@ -26,4 +25,4 @@ function PorfolioPage() {
   );
 }
 
-export default PorfolioPage;
+export default PorfolioHeader;
