@@ -3,7 +3,7 @@ import PortfolioProjects from "../components/porfolioProjects";
 
 function PorfolioPage() {
   return (
-    <main className="pt-[6rem] flex flex-col  h-screen">
+    <main className="pt-[6rem] flex flex-col ">
       <section className="flex flex-col ">
         <header className=" text-center">
           <h1 className=" inline-block text-[48px] font-bold leading-[45px] relative  ">
