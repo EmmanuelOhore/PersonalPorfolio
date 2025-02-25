@@ -2,6 +2,7 @@ import AboutMe from "../components/AboutMe";
 import AnimatedBackground from "../components/AnimimatedBackgrounmd";
 import MainSection from "../components/Herosection";
 import NavBar from "../components/NavBar";
+import ContactsPage from "./ContactsPage";
 import PorfolioPage from "./PorfolioPage";
 function Hompage() {
   return (
@@ -11,6 +12,7 @@ function Hompage() {
       <MainSection />
       <AboutMe />
       <PorfolioPage />
+      <ContactsPage />
     </div>
   );
 }
