@@ -1,13 +1,22 @@
 import place from "../assets/place.png";
+import task from "../assets/projectpreview/taskMananger.png";
+import weather from "../assets/projectpreview/wetherapp.png";
+import { Link } from "react-router-dom";
 const Projects = () => {
   const projectDta = [
     {
-      title: "Auto Chat Disord",
-      desc: "AutoChat adalah solusi otomatisasi untuk mengirim pesan ke saluran Discord secara",
+      title: "Weather App",
+      desc: "The Weather App is a modern and interactive web application that provides real-time weather updates",
+      details_link: "weatherapp",
+      imge: weather,
+      live_demo: "https://emmanuelohore.github.io/WeatherApp/",
     },
     {
-      title: "Auto Chat Disord",
-      desc: "AutoChat adalah solusi otomatisasi untuk mengirim pesan ke saluran Discord secara",
+      title: "Task Management App",
+      desc: "The Task Management App is a simple yet efficient tool designed to help users",
+      details_link: "taskmanager",
+      imge: task,
+      live_demo: "https://taskhivetracker.netlify.app/",
     },
     {
       title: "Auto Chat Disord",
@@ -32,7 +41,10 @@ const Projects = () => {
             >
               <span className="absolute inset-0 bg-gradient-to-br from-cyan-800 via-[#050215]  rounded-2xl opacity-50 group-hover:opacity-80 transition-all  duration-300 -z-10"></span>
               <header className="w-[100%] h-[13rem]">
-                <img src={place} className="w-full h-full object-cover" />
+                <img
+                  src={item.imge || place}
+                  className="w-full h-full object-cover"
+                />
               </header>
               <div className="content  flex flex-col gap-5">
                 <div className="relative">
@@ -47,13 +59,19 @@ const Projects = () => {
                 </p>
                 <div className="flex justify-between items-center">
                   <h2 className="text-[12px] text-[#93C5FD]">
-                    Live Demo
+                    <a href={item.live_demo} target="_blank" rel="noreferrer">
+                      Live Demo
+                    </a>
+
                     <i className="fa-solid fa-arrow-up-right-from-square text-[11px] pl-2"></i>
                   </h2>
-                  <button className=" text-[12px] px-6 py-2 rounded-md text-[white] bg-gray-600/40">
+                  <Link
+                    to={`/select/${item.details_link}`}
+                    className=" text-[12px] px-6 py-2 rounded-md text-[white] bg-gray-600/40"
+                  >
                     Details
                     <i className="fa-solid pl-2 text-[11px] fa-arrow-right"></i>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

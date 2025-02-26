@@ -1,5 +1,21 @@
 import PostComments from "../../ui/postCommets";
+import { supabase } from "../../services/supabase";
+import { useEffect } from "react";
+
 const Commects = () => {
+  useEffect(() => {
+    const fetchData = async () => {
+      let { data: orders, error } = await supabase.from("orders").select("*");
+
+      if (error) {
+        console.error("Error fetching data:", error);
+      } else {
+        console.log("Fetched orders:", orders);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <section className="bg-gradient-to-tr from-cyan-800/10 via-cyan-300/10 to-cyan-700/10 flex-1 rounded-[2rem] p-4 ">
       {/* header */}
@@ -35,7 +51,7 @@ const Commects = () => {
             name="message"
             id="name"
             placeholder="Enter Your messge here..."
-            className="input w-full bg-[#262a37]/50 p-4 rounded-xl text-white border border-transparent focus:border-cyan-700 focus:outline-none placeholder:text-[14px] resize-none  h-[10rem]"
+            className="input w-full bg-[#262a37]/50 p-4 rounded-xl text-white border border-transparent focus:border-cyan-700 focus:outline-none placeholder:text-[14px] resize-none  h-[9rem]"
           />
         </div>
         {/* profilepic  */}

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import Hompage from "./pages/Hompage";
 import WelcomePage from "./pages/Welcomepage";
-import PorfolioPage from "./pages/PorfolioPage";
 import { Route, Routes } from "react-router-dom";
+import SelectedPorfolio from "./components/porfolio/selectedPorfolio";
 
 function App() {
   const [isloaded, setisloaded] = useState(true);
@@ -19,6 +19,7 @@ function App() {
         ) : (
           <Routes>
             <Route path="/" element={<Hompage />} />
+            <Route path="/select/:id" element={<SelectedPorfolio />} />
           </Routes>
         )}
       </AnimatePresence>
