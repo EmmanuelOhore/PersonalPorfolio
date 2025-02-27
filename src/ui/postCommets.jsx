@@ -10,7 +10,7 @@ const PostComments = ({ name, post, time }) => {
           <p className="text-[#C1C4CC] text-[14px] font-semibold ">{post}</p>
         </div>
       </div>
-      <p className="text-[#9399A6] text-[12px] font-normal">{time}h ago</p>
+      <p className="text-[#9399A6] text-[12px] font-normal">{time}</p>
     </div>
   );
 };

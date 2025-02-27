@@ -1,5 +1,8 @@
 import place from "../assets/place.png";
 import task from "../assets/projectpreview/taskMananger.png";
+import todo from "../assets/projectpreview/todo.png";
+import clip from "../assets/projectpreview/clip.png";
+import card from "../assets/projectpreview/card.png";
 import weather from "../assets/projectpreview/wetherapp.png";
 import { Link } from "react-router-dom";
 const Projects = () => {
@@ -19,12 +22,25 @@ const Projects = () => {
       live_demo: "https://taskhivetracker.netlify.app/",
     },
     {
-      title: "Auto Chat Disord",
-      desc: "AutoChat adalah solusi otomatisasi untuk mengirim pesan ke saluran Discord secara",
+      title: "TodoList",
+      desc: "This is a simple and interactive To-Do List web app designed to help users organize tasks efficiently",
+      details_link: "todolist",
+      imge: todo,
+      live_demo: "https://emmanuelohore.github.io/todolist/",
     },
     {
-      title: "Auto Chat Disord",
-      desc: "AutoChat adalah solusi otomatisasi untuk mengirim pesan ke saluran Discord secara",
+      title: "Landing Page",
+      desc: "The Clipboard Landing Page is a modern and responsive webpage designed to showcase the features of a clipboard application",
+      imge: clip,
+      details_link: "clipboard",
+      live_demo: "https://clip-board-land-page.netlify.app/",
+    },
+    {
+      title: "Interactive Card Details Form",
+      desc: "The Interactive Card Details Form is a sleek and user-friendly web application that allows users to input and preview their credit or debit card details",
+      imge: card,
+      details_link: "interactiveCard",
+      live_demo: "https://interactive-card-deatails.netlify.app/",
     },
   ];
   return (

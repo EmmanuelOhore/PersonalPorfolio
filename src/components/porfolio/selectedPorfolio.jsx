@@ -1,5 +1,8 @@
 import AnimatedBackground from "../AnimimatedBackgrounmd";
 import task from "../../assets/projectpreview/taskMananger.png";
+import todo from "../../assets/projectpreview/todo.png";
+import clip from "../../assets/projectpreview/clip.png";
+import card from "../../assets/projectpreview/card.png";
 import waether from "../../assets/projectpreview/wetherapp.png";
 import { useParams } from "react-router-dom";
 import ScrollToTop from "../scrolltotop";
@@ -8,6 +11,58 @@ import NavHeader from "./porfolionavHeader";
 const SelectedPorfolio = () => {
   const { id } = useParams();
   const content = {
+    clipboard: {
+      title: "Clipboard Landing Page",
+      description:
+        "The Clipboard Landing Page is a sleek and responsive website that showcases the features of a clipboard application. It emphasizes seamless text storage and synchronization across multiple devices while maintaining an elegant and modern design.",
+      live_demo: "https://clip-board-land-page.netlify.app/",
+      github_link:
+        "https://github.com/EmmanuelOhore/Html-CSS_Projects/tree/main/clipboard-landing-page-master-project",
+      tech_summary: { total_tech: 3, main_features: 4 },
+      port_img: clip,
+      tech_stack: ["HTML", "CSS", "JavaScript"],
+      key_features: [
+        "Responsive Design – Fully optimized for different screen sizes, ensuring smooth accessibility on desktops, tablets, and mobile devices.",
+        "Modern and Clean UI – Uses a minimalist approach with smooth transitions and visually appealing layouts.",
+        "Feature Highlight Sections – Displays key functionalities of the Clipboard app using well-structured content blocks and eye-catching visuals.",
+        "Call-to-Action Buttons – Includes clear CTA buttons to guide users towards app downloads or further engagement.",
+      ],
+    },
+
+    todolist: {
+      title: "To-Do List App",
+      description:
+        "The To-Do List App is a simple and interactive web application that helps users manage their daily tasks efficiently. Users can add, delete, and mark tasks as completed while enjoying a clean and responsive interface.",
+      live_demo: "https://emmanuelohore.github.io/todolist/",
+      github_link: "https://github.com/EmmanuelOhore/todolist",
+      tech_summary: { total_tech: 4, main_features: 5 },
+      port_img: todo,
+      tech_stack: ["React", "HTML", "CSS", "JavaScript"],
+      key_features: [
+        "Add New Tasks Dynamically – Users can input tasks and see them appear instantly in the list, ensuring a smooth and interactive experience.",
+        "Mark Tasks as Completed – Tasks can be checked off when completed, improving task tracking and productivity.",
+        "Delete  Tasks – Users can either remove tasks they no longer need or edit them if they need modifications.",
+        "Pagination for Task Management – If a user has multiple tasks, they are divided into pages to avoid clutter and enhance readability.",
+        "Simple and User-Friendly UI – Designed with a minimalist approach, offering smooth transitions and a visually appealing experience.",
+      ],
+    },
+    interactiveCard: {
+      title: "Interactive Card Details Form",
+      description:
+        "The Interactive Card Details Form is a sleek and dynamic web application that allows users to input and preview their card details in real-time. With smooth animations and a responsive design, it enhances the user experience while practicing form validation and interactive UI design.",
+      live_demo: "https://interactive-card-deatails.netlify.app/",
+      github_link:
+        "https://github.com/EmmanuelOhore/Html-CSS_Projects/tree/main/interactive-card-details-form-main-project",
+      tech_summary: { total_tech: 4, main_features: 3 },
+      port_img: card,
+      tech_stack: ["HTML", "CSS", "JavaScript", "Form Validation"],
+      key_features: [
+        "Real-Time Card Preview – Users can enter their card details, and the virtual card updates dynamically to reflect the information.",
+        "Form Validation – Ensures correct formatting for card numbers, expiration dates, and CVC codes to prevent errors.",
+        "Responsive Design – Works smoothly across different screen sizes, making it mobile-friendly and accessible.",
+      ],
+    },
+
     weatherapp: {
       title: "Weather App",
       description:
@@ -65,7 +120,7 @@ const SelectedPorfolio = () => {
           </header>
 
           {/* porfolio_preview img container */}
-          <div className="img_container   overflow-hidden  w-[45%] outline outline-1 outline-white rounded-2xl">
+          <div className="img_container   overflow-hidden  w-[45%]  rounded-2xl">
             <img
               src={details.port_img}
               alt="porfolio_preview"
