@@ -10,7 +10,6 @@ export default {
         wide: "1440px",
         laptop: { max: "1024px" },
         tablet: { max: "900px" },
-        phoneS: { max: "700px" },
         phoneL: { max: "500px" },
         phoneP: { max: "390px" },
       },

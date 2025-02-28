@@ -11,7 +11,7 @@ function TypeWriterSec() {
       <h1
         data-aos="fade-up"
         data-aos-delay="200"
-        className="text-[1.5rem] text-white"
+        className="text-[1.5rem] text-white laptop:text-[1rem] tablet:text-[.9rem] phoneP:text-[.8rem]"
       >
         <Typewriter
           options={{

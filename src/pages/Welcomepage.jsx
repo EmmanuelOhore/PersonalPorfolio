@@ -10,7 +10,7 @@ const WelcomePage = ({ onLoadComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    Aos.init({ duration: 1000 });
+    Aos.init({ duration: 1000, once: true });
     const timeout = setTimeout(() => {
       setIsVisible(false);
       setTimeout(() => {

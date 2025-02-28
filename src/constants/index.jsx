@@ -51,3 +51,32 @@ export const techStack = [
     Language: "vercel",
   },
 ];
+
+export const ScrollToSetion = (id) => {
+  const element = document.getElementById(id);
+  element.scrollIntoView({ behavior: "smooth" });
+};
+
+// nav data export
+export const navData = [
+  {
+    id: 1,
+    name: "Home",
+    section: "home",
+  },
+  {
+    id: 2,
+    name: "About",
+    section: "about",
+  },
+  {
+    id: 3,
+    name: "Portfolio",
+    section: "portfolio",
+  },
+  {
+    id: 4,
+    name: "Contact",
+    section: "contact",
+  },
+];

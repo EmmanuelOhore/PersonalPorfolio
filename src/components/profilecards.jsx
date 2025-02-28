@@ -2,9 +2,9 @@ import Cards from "./cards";
 
 const ExpericeCards = () => {
   return (
-    <section className="flex  gap-6 px-[6rem] py-8 ">
+    <section className="flex  gap-6 px-[6rem] py-8 laptop:px-[1rem] justify-center tablet:py-3 tablet:px-[0.5rem] phoneL:flex-col phoneL:px-[1rem] phoneL:gap-3 phoneP:mt-5">
       <Cards
-        num={12}
+        num={9}
         header="total projects"
         text="innovative web solutions crafted"
         icon=" fa-code"

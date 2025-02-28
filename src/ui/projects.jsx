@@ -10,6 +10,7 @@ import port from "../assets/projectpreview/port.png";
 import weather from "../assets/projectpreview/wetherapp.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+
 const Projects = () => {
   const [show, setShow] = useState(3);
   const projectDta = [
@@ -85,72 +86,91 @@ const Projects = () => {
   const handleShowLess = () => {
     setShow(3);
   };
+
   return (
     <>
-      <section className=" w-[80%] p-4 mx-auto   gap-[20px]  justify-between flex flex-wrap ">
-        {projectDta.slice(0, show).map((item, index) => {
-          return (
-            <div
-              data-aos="fade-right"
-              data-aos-delay={index * 50}
-              key={index}
-              style={{ width: "calc(33.33% - 20px)" }}
-              className="z-20  relative flex p-5 justify-center group    flex-col gap-4 items-center rounded-2xl  cursor-pointer shadow-lg hover:scale-105 hover:border-cyan-800 border border-transparent transition-all duration-500  "
-            >
-              <span className="absolute inset-0 bg-gradient-to-br from-cyan-800 via-[#050215]  rounded-2xl opacity-50 group-hover:opacity-80 transition-all  duration-300 -z-10"></span>
-              <header className="max-w-[100%] h-[13rem]">
-                <img
-                  data-aos="zoom-in"
-                  data-aos-delay={index * 50}
-                  src={item.imge || place}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-md"
-                />
-              </header>
-              <div className="content  flex flex-col gap-5">
-                <div className="relative">
-                  <h1 className="absolute bg-gradient-to-tr font-bold text-[19px] from-white to-cyan-600 bg-clip-text text-transparent">
-                    {item.title}
-                  </h1>
-                  <br />
-                </div>
+      <section
+        className="w-[80%] p-4 mx-auto grid gap-6 
+        wide:grid-cols-3 laptop:w-[98%]  laptop:grid-cols-3 tablet:grid-cols-2 phoneL:grid-cols-1 phoneP:p-1"
+      >
+        {projectDta.slice(0, show).map((item, index) => (
+          <div
+            data-aos="fade-right"
+            data-aos-delay={index * 50}
+            key={index}
+            className="z-20 relative flex p-5 justify-center group flex-col gap-4 
+              items-center rounded-2xl cursor-pointer shadow-lg 
+              hover:scale-105 hover:border-cyan-800 border border-transparent 
+              transition-all duration-500 phoneP:p-3 "
+          >
+            <span
+              className="absolute inset-0 bg-gradient-to-br from-cyan-800 via-[#050215]  
+              rounded-2xl opacity-50 group-hover:opacity-80 transition-all 
+              duration-300 -z-10"
+            ></span>
 
-                <p className="text-[14px] leading-[18px] text-[#838996]">
-                  {item.desc}
-                </p>
-                <div className="flex justify-between items-center">
-                  <h2 className="text-[12px] text-[#93C5FD]">
-                    <a href={item.live_demo} target="_blank" rel="noreferrer">
-                      Live Demo
-                    </a>
+            <header className="w-full h-[13rem]">
+              <img
+                data-aos="zoom-in"
+                data-aos-delay={index * 50}
+                src={item.imge || place}
+                className="w-full h-full object-cover group-hover:scale-105 
+                  transition-all duration-500 rounded-md"
+              />
+            </header>
 
-                    <i className="fa-solid fa-arrow-up-right-from-square text-[11px] pl-2"></i>
-                  </h2>
-                  <Link
-                    to={`/select/${item.details_link}`}
-                    className=" text-[12px] px-6 py-2 rounded-md text-[white] bg-gray-600/40"
-                  >
-                    Details
-                    <i className="fa-solid pl-2 text-[11px] fa-arrow-right"></i>
-                  </Link>
-                </div>
+            <div className="content flex flex-col gap-5">
+              <h1
+                className="bg-gradient-to-tr font-bold text-[19px] from-white to-cyan-600 
+                bg-clip-text text-transparent"
+              >
+                {item.title}
+              </h1>
+
+              <p className="text-[14px] leading-[18px] text-[#838996]">
+                {item.desc}
+              </p>
+
+              <div className="flex justify-between items-center w-full">
+                <h2 className="text-[12px] text-[#93C5FD]">
+                  <a href={item.live_demo} target="_blank" rel="noreferrer">
+                    Live Demo
+                  </a>
+                  <i className="fa-solid fa-arrow-up-right-from-square text-[11px] pl-2"></i>
+                </h2>
+                <Link
+                  to={`/select/${item.details_link}`}
+                  className="text-[12px] px-6 py-2 rounded-md 
+                    text-white bg-gray-600/40"
+                >
+                  Details
+                  <i className="fa-solid pl-2 text-[11px] fa-arrow-right"></i>
+                </Link>
               </div>
             </div>
-          );
-        })}
+          </div>
+        ))}
       </section>
-      <div className="btn w-[80%]  p-4 mx-auto">
+
+      <div className="w-full flex justify-center mt-6">
         {show < projectDta.length ? (
           <button
             onClick={handleshowmore}
-            className="text-[white] text-[16px]  capitalize cursor-pointer relative z-30  px-6 py-3 border-cyan-400/30 border hover:scale-105 hover:bg-cyan-700/40 hover:border-cyan-300 transition-all duration-300  rounded-lg bg-cyan-700/20"
+            className="text-white z-30 text-[16px] capitalize cursor-pointer 
+              px-6 py-3 border-cyan-400/30 border hover:scale-105 
+              hover:bg-cyan-700/40 hover:border-cyan-300 transition-all 
+              duration-300 rounded-lg bg-cyan-700/20"
           >
             Show more
-            <i className="fa-solid  pl-2 fa-chevron-down"></i>
+            <i className="fa-solid pl-2 fa-chevron-down"></i>
           </button>
         ) : (
           <button
             onClick={handleShowLess}
-            className="text-[white] text-[16px]  capitalize cursor-pointer relative z-30  px-6 py-3 border-cyan-400/30 border hover:scale-105 hover:bg-cyan-700/40 hover:border-cyan-300 transition-all duration-300  rounded-lg bg-cyan-700/20"
+            className="text-white z-30 text-[16px] capitalize cursor-pointer 
+              px-6 py-3 border-cyan-400/30 border hover:scale-105 
+              hover:bg-cyan-700/40 hover:border-cyan-300 transition-all 
+              duration-300 rounded-lg bg-cyan-700/20"
           >
             Show less
             <i className="fa-solid pl-2 fa-chevron-up"></i>
