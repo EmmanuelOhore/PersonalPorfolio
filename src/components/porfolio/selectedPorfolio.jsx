@@ -4,6 +4,8 @@ import todo from "../../assets/projectpreview/todo.png";
 import africa from "../../assets/projectpreview/africa.png";
 import clip from "../../assets/projectpreview/clip.png";
 import pro1 from "../../assets/projectpreview/pro1.png";
+import port from "../../assets/projectpreview/port.png";
+import ballot from "../../assets/projectpreview/ballot.png";
 import card from "../../assets/projectpreview/card.png";
 import waether from "../../assets/projectpreview/wetherapp.png";
 import { useParams } from "react-router-dom";
@@ -71,6 +73,38 @@ const SelectedPorfolio = () => {
         "AltSchool Schools Page – A page listing all the schools within AltSchool Africa, structured for easy readability and accessibility.",
         "Form Validation – Ensures users input valid information in the login fields before submission.",
         "Responsive Design – Optimized for different screen sizes to provide a seamless user experience on both mobile and desktop devices.",
+      ],
+    },
+    ballotAuthPage: {
+      title: "Ballot Dashboard Auth",
+      description:
+        "This project is a simple yet functional authentication system for a ballot dashboard. It features a clean and user-friendly login and signup interface, designed for seamless user access. Built with HTML, CSS, and JavaScript, the authentication pages ensure smooth navigation while maintaining a responsive design for various screen sizes.",
+      live_demo: "https://ballot-dash-reg.netlify.app/",
+      github_link: "https://github.com/EmmanuelOhore/ballotProject",
+      tech_summary: { total_tech: 3, main_features: 3 },
+      port_img: ballot,
+      tech_stack: ["HTML", "CSS", "JavaScript"],
+      key_features: [
+        "Login & Signup Pages – Provides a structured interface for user authentication.",
+        "Responsive Design – Optimized for both desktop and mobile users.",
+        "Smooth User Experience – Minimalistic design ensuring easy navigation and usability.",
+      ],
+    },
+
+    onePagePortfolio: {
+      title: "One-Page Portfolio",
+      description:
+        "This project is a modern, visually appealing one-page portfolio website designed to showcase personal or professional work. Built with HTML, CSS, and JavaScript, it features smooth scrolling, interactive animations, and a fully responsive layout. The portfolio presents sections for an introduction, skills, projects, and contact information, making it an excellent template for developers and designers looking to establish an online presence.",
+      live_demo: "https://preview-one-page.netlify.app/",
+      github_link: "https://github.com/EmmanuelOhore/porfolioV1",
+      tech_summary: { total_tech: 3, main_features: 4 },
+      port_img: port,
+      tech_stack: ["HTML", "CSS", "JavaScript"],
+      key_features: [
+        "Smooth Scrolling – Implements a seamless scrolling experience for easy navigation across sections.",
+        "Responsive Design – Fully optimized for desktops, tablets, and mobile devices.",
+        "Interactive Animations – Subtle animations enhance the user experience and engagement.",
+        "Contact Section – Includes a  contact form or social media links for easy communication.",
       ],
     },
 

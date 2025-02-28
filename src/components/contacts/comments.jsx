@@ -55,8 +55,25 @@ const Commects = () => {
     document.getElementById("fileInput").click();
   };
 
-  const handleimageupload = (e) => {
-    setImage(URL.createObjectURL(e.target.files[0]));
+  const handleimageupload = async (e) => {
+    const file = e.target.files[0];
+    console.log(file);
+    const fileExt = file.name.split(".").pop();
+    const fileName = `${Date.now()}.${fileExt}`;
+    try {
+      const { data, error } = await supabase.storage
+        .from("comment_image")
+        .upload(fileName, file, {
+          upsert: true,
+        });
+      if (error) throw new Error(error.message);
+      const { data: urlData } = supabase.storage
+        .from("comment_image")
+        .getPublicUrl(fileName);
+      setImage(urlData.publicUrl);
+    } catch (error) {
+      console.log("Error uploading file: ", error.message);
+    }
   };
 
   return (

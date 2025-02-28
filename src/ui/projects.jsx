@@ -5,6 +5,8 @@ import clip from "../assets/projectpreview/clip.png";
 import africa from "../assets/projectpreview/africa.png";
 import card from "../assets/projectpreview/card.png";
 import pro1 from "../assets/projectpreview/pro1.png";
+import ballot from "../assets/projectpreview/ballot.png";
+import port from "../assets/projectpreview/port.png";
 import weather from "../assets/projectpreview/wetherapp.png";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -41,6 +43,13 @@ const Projects = () => {
       live_demo: "https://emmanuelohore.github.io/todolist/",
     },
     {
+      title: "One-Page Portfolio",
+      desc: "A sleek and modern one-page portfolio website built with HTML, CSS, and JavaScript. This project features smooth scrolling, responsive design",
+      imge: port,
+      details_link: "onePagePortfolio",
+      live_demo: "https://preview-one-page.netlify.app/",
+    },
+    {
       title: "Landing Page",
       desc: "The Clipboard Landing Page is a modern and responsive webpage designed to showcase the features of a clipboard application",
       imge: clip,
@@ -60,6 +69,13 @@ const Projects = () => {
       imge: pro1,
       details_link: "altSchoolProject1",
       live_demo: "https://alt-school-project1-assignment.netlify.app/",
+    },
+    {
+      title: "Ballot Dashboard",
+      desc: "Ballot Dashboard Auth is a simple and responsive authentication interface featuring login and signup pages for accessing a ballot dashboard.",
+      imge: ballot,
+      details_link: "ballotAuthPage",
+      live_demo: "https://ballot-dash-reg.netlify.app/",
     },
   ];
 
