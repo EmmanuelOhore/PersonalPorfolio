@@ -2,10 +2,14 @@ import place from "../assets/place.png";
 import task from "../assets/projectpreview/taskMananger.png";
 import todo from "../assets/projectpreview/todo.png";
 import clip from "../assets/projectpreview/clip.png";
+import africa from "../assets/projectpreview/africa.png";
 import card from "../assets/projectpreview/card.png";
+import pro1 from "../assets/projectpreview/pro1.png";
 import weather from "../assets/projectpreview/wetherapp.png";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const Projects = () => {
+  const [show, setShow] = useState(3);
   const projectDta = [
     {
       title: "Weather App",
@@ -20,6 +24,14 @@ const Projects = () => {
       details_link: "taskmanager",
       imge: task,
       live_demo: "https://taskhivetracker.netlify.app/",
+    },
+    {
+      title: "Smiling Hands NGO Website",
+      desc: "Smiling Hands NGO Website is a beautifully designed platform that showcases the mission, vision, and impact of the organization",
+      details_link: "smilingHandsNGO",
+      imge: africa,
+      live_demo:
+        "https://smiling-hands-website-2gj93vxbe-ohore-emmanuels-projects.vercel.app/",
     },
     {
       title: "TodoList",
@@ -42,11 +54,25 @@ const Projects = () => {
       details_link: "interactiveCard",
       live_demo: "https://interactive-card-deatails.netlify.app/",
     },
+    {
+      title: "AltSchool Project 1 ",
+      desc: "The AltSchool Project 1 Assignment is a recreated version of the AltSchool login page, built to practice authentication UI design and form validation.",
+      imge: pro1,
+      details_link: "altSchoolProject1",
+      live_demo: "https://alt-school-project1-assignment.netlify.app/",
+    },
   ];
+
+  const handleshowmore = () => {
+    setShow((prev) => Math.min(prev + 3, projectDta.length));
+  };
+  const handleShowLess = () => {
+    setShow(3);
+  };
   return (
     <>
       <section className=" w-[80%] p-4 mx-auto   gap-[20px]  justify-between flex flex-wrap ">
-        {projectDta.map((item, index) => {
+        {projectDta.slice(0, show).map((item, index) => {
           return (
             <div
               data-aos="fade-right"
@@ -56,10 +82,12 @@ const Projects = () => {
               className="z-20  relative flex p-5 justify-center group    flex-col gap-4 items-center rounded-2xl  cursor-pointer shadow-lg hover:scale-105 hover:border-cyan-800 border border-transparent transition-all duration-500  "
             >
               <span className="absolute inset-0 bg-gradient-to-br from-cyan-800 via-[#050215]  rounded-2xl opacity-50 group-hover:opacity-80 transition-all  duration-300 -z-10"></span>
-              <header className="w-[100%] h-[13rem]">
+              <header className="max-w-[100%] h-[13rem]">
                 <img
+                  data-aos="zoom-in"
+                  data-aos-delay={index * 50}
                   src={item.imge || place}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500 rounded-md"
                 />
               </header>
               <div className="content  flex flex-col gap-5">
@@ -94,6 +122,25 @@ const Projects = () => {
           );
         })}
       </section>
+      <div className="btn w-[80%]  p-4 mx-auto">
+        {show < projectDta.length ? (
+          <button
+            onClick={handleshowmore}
+            className="text-[white] text-[16px]  capitalize cursor-pointer relative z-30  px-6 py-3 border-cyan-400/30 border hover:scale-105 hover:bg-cyan-700/40 hover:border-cyan-300 transition-all duration-300  rounded-lg bg-cyan-700/20"
+          >
+            Show more
+            <i className="fa-solid  pl-2 fa-chevron-down"></i>
+          </button>
+        ) : (
+          <button
+            onClick={handleShowLess}
+            className="text-[white] text-[16px]  capitalize cursor-pointer relative z-30  px-6 py-3 border-cyan-400/30 border hover:scale-105 hover:bg-cyan-700/40 hover:border-cyan-300 transition-all duration-300  rounded-lg bg-cyan-700/20"
+          >
+            Show less
+            <i className="fa-solid pl-2 fa-chevron-up"></i>
+          </button>
+        )}
+      </div>
     </>
   );
 };

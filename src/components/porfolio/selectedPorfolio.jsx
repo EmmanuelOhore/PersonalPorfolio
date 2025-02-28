@@ -1,7 +1,9 @@
 import AnimatedBackground from "../AnimimatedBackgrounmd";
 import task from "../../assets/projectpreview/taskMananger.png";
 import todo from "../../assets/projectpreview/todo.png";
+import africa from "../../assets/projectpreview/africa.png";
 import clip from "../../assets/projectpreview/clip.png";
+import pro1 from "../../assets/projectpreview/pro1.png";
 import card from "../../assets/projectpreview/card.png";
 import waether from "../../assets/projectpreview/wetherapp.png";
 import { useParams } from "react-router-dom";
@@ -26,6 +28,49 @@ const SelectedPorfolio = () => {
         "Modern and Clean UI – Uses a minimalist approach with smooth transitions and visually appealing layouts.",
         "Feature Highlight Sections – Displays key functionalities of the Clipboard app using well-structured content blocks and eye-catching visuals.",
         "Call-to-Action Buttons – Includes clear CTA buttons to guide users towards app downloads or further engagement.",
+      ],
+    },
+    smilingHandsNGO: {
+      title: "Smiling Hands NGO Website",
+      description:
+        "The Smiling Hands NGO Website is a well-structured platform that highlights the mission, vision, and impact of the organization. It provides clear insights into various initiatives, ongoing projects, and ways for visitors to contribute or get involved. The website features an intuitive layout with engaging visuals to ensure a seamless user experience.",
+      live_demo:
+        "https://smiling-hands-website-2gj93vxbe-ohore-emmanuels-projects.vercel.app/",
+      github_link: "https://github.com/EmmanuelOhore/smilingHandsWebsite",
+      tech_summary: { total_tech: 7, main_features: 4 },
+      port_img: africa,
+      tech_stack: [
+        "HTML",
+        "AOS",
+        "tailnwind",
+        "JavaScript",
+        "vercel",
+        "React",
+        "Responsive Design",
+      ],
+      key_features: [
+        "Comprehensive NGO Overview – Showcases the organization's mission, vision, and core values.",
+        "Project and Initiative Showcase – Highlights past and ongoing humanitarian projects with detailed descriptions.",
+        "Volunteer & Donation Sections – Provides easy access to volunteer sign-ups and donation options.",
+        "Fully Responsive Design – Optimized for both desktop and mobile users, ensuring accessibility across all devices.",
+      ],
+    },
+    altSchoolProject1: {
+      title: "AltSchool Project 1 ",
+      description:
+        "This project is a refined clone of the AltSchool login page, created as part of an assignment to practice authentication UI design and form handling. It incorporates essential login functionalities while maintaining a clean, user-friendly interface. The project also explores responsive design and validation techniques to enhance the user experience.",
+      live_demo: "https://alt-school-project1-assignment.netlify.app/",
+      github_link:
+        "https://github.com/EmmanuelOhore/AltSchool-Africa/tree/main/Assignment-1",
+      tech_summary: { total_tech: 4, main_features: 5 },
+      port_img: pro1,
+      tech_stack: ["HTML", "CSS", "JavaScript", "Responsive Design"],
+      key_features: [
+        "Login Page Recreation – A fully styled login page inspired by AltSchool's design, featuring form validation and structured input fields.",
+        "Media Showcase Page – A dedicated page displaying various media elements, including images, videos, and audio, using pure HTML.",
+        "AltSchool Schools Page – A page listing all the schools within AltSchool Africa, structured for easy readability and accessibility.",
+        "Form Validation – Ensures users input valid information in the login fields before submission.",
+        "Responsive Design – Optimized for different screen sizes to provide a seamless user experience on both mobile and desktop devices.",
       ],
     },
 
@@ -225,7 +270,7 @@ const SelectedPorfolio = () => {
                     className="flex cursor-pointer  p-5 rounded-xl hover:bg-cyan-700/20 transition-all duration-300 gap-2"
                   >
                     <i className="fa-solid text-[10px] text-cyan-700 fa-circle pt-2"></i>
-                    <p className="text-[14px] font-normal   text-[#F2F2F3]">
+                    <p className="text-[15px] font-normal   text-[#F2F2F3]">
                       {item}
                     </p>
                   </li>

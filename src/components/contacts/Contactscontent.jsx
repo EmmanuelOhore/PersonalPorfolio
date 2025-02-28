@@ -1,4 +1,3 @@
-import PostComments from "../../ui/postCommets";
 import Commects from "./comments";
 import GetInTouch from "./getinTouch";
 

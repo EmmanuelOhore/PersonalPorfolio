@@ -3,7 +3,7 @@ import PortfolioProjects from "../components/porfolioProjects";
 function PorfolioHeader() {
   return (
     <main className="pt-[6rem] flex flex-col ">
-      <section className="flex flex-col ">
+      <section data-aos="fade-up" className="flex flex-col ">
         <header className=" text-center">
           <h1 className=" inline-block text-[48px] font-bold leading-[45px] relative  ">
             <span className="bg-gradient-to-t from-white to-cyan-500 absolute -inset-5 opacity-30 blur-xl"></span>

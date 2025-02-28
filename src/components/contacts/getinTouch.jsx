@@ -1,7 +1,10 @@
 import LinksCard from "../../ui/linksCard";
 const GetInTouch = () => {
   return (
-    <section className="bg-gradient-to-tr from-cyan-800/10 via-cyan-300/10 to-cyan-700/10 w-[35%] rounded-[2rem] p-8 ">
+    <section
+      data-aos="fade-right"
+      className="bg-gradient-to-tr from-cyan-800/10 via-cyan-300/10 to-cyan-700/10 w-[35%] rounded-[2rem] p-8 "
+    >
       <header>
         <div className="flex justify-between items-center">
           <h1 className="bg-gradient-to-t text-[2rem] font-bold from-white to-cyan-700 bg-clip-text text-transparent ">
@@ -14,9 +17,13 @@ const GetInTouch = () => {
         </p>
       </header>
       {/* form   */}
-      <form className="border-b-2 pb-7 border-[#838996]">
+      <form className="border-b-2 pb-7 mt-10 border-[#838996]">
         <div className="flex flex-col gap-4 mt-6 ">
-          <div className="flex   items-center relative   z-30">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="flex   items-center relative   z-30"
+          >
             <i className="fa-solid fa-user absolute left-3 text-[#838996]"></i>
             <input
               type="text"
@@ -26,7 +33,11 @@ const GetInTouch = () => {
               className="input w-full bg-[#262a37]/50 py-4 pl-10 rounded-xl text-white border border-transparent focus:border-cyan-700 focus:outline-none placeholder:text-[14px]"
             />
           </div>
-          <div className="flex   items-center relative   z-30">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="flex   items-center relative   z-30"
+          >
             <i className=" absolute left-3 fa-solid fa-envelope text-[#838996]"></i>
             <input
               type="email"
@@ -36,16 +47,24 @@ const GetInTouch = () => {
               className="input w-full bg-[#262a37]/50 py-4 pl-10 rounded-xl text-white border border-transparent focus:border-cyan-700 focus:outline-none placeholder:text-[14px]"
             />
           </div>
-          <div className="flex    relative   z-30">
+          <div
+            data-aos="fade-up"
+            data-aos-delay="300"
+            className="flex    relative   z-30"
+          >
             <i className="fa-solid fa-message absolute left-3 top-[1.3rem]   text-[#838996]"></i>
             <textarea
               name="message"
               id="message"
               placeholder="Enter your message"
-              className="input text-white h-[6.5rem] w-full  bg-[#262a37]/50 py-4 pl-10 rounded-xl resize-none border border-transparent focus:border-cyan-700 focus:outline-none placeholder:text-[14px]"
+              className="input text-white h-[10rem] w-full  bg-[#262a37]/50 py-4 pl-10 rounded-xl resize-none border border-transparent focus:border-cyan-700 focus:outline-none placeholder:text-[14px]"
             ></textarea>
           </div>
-          <button className="btn btn-cyan   p-4 font-bold text-white bg-gradient-to-tr from-cyan-500 rounded-xl via-cyan-700 to-cyan-800">
+          <button
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="btn btn-cyan   p-4 font-bold text-white bg-gradient-to-tr from-cyan-500 rounded-xl via-cyan-700 to-cyan-800"
+          >
             <i className="fa-solid fa-location-arrow pr-3"></i>
             Send Message
           </button>
@@ -53,7 +72,7 @@ const GetInTouch = () => {
       </form>
 
       {/* connect wth me */}
-      <div className="bg-gradient-to-b from-cyan-700/20 via-cyan-500/10 to-cyan-900/20 mt-10 rounded-[2rem] p-4 ">
+      <div className="bg-gradient-to-b from-cyan-700/20 via-cyan-500/10 to-cyan-900/20 mt-16 rounded-[2rem] p-4 ">
         <header className="flex items-center">
           <i className="fa-solid fa-minus pr-2 text-[3rem] text-cyan-600"></i>
           <h1 className="font-bold text-[25px] text-white  capitalize ">
