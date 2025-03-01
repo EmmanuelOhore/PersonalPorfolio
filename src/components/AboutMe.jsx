@@ -103,10 +103,10 @@ function AboutMe() {
             data-aos-delay="300"
             className="text-[18px] text-[#838996] tracking-wide laptop:text-[17px] phoneL:text-[14px] phoneP:text-[12px] phoneP:tracking-normal"
           >
-            seorang siswa Teknik Jaringan Komputer dan Telekomunikasi yang
-            tertarik dalam pengembangan Front-End. Saya berfokus pada
-            menciptakan pengalaman digital yang menarik dan selalu berusaha
-            memberikan solusi terbaik dalam setiap proyek.
+            A Frontend Developer passionate about crafting interactive and
+            user-friendly digital experiences. I specialize in React,
+            JavaScript, and Tailwind CSS, constantly learning and refining my
+            skills to build seamless and efficient web applications
           </p>
           <div className="btn-container z-30 relative flex gap-6 phoneP:gap-3 phoneP:mt-3">
             <a
