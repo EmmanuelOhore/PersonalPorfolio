@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* scrollbar styling  */
+.scrollbar_customization::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 6px; /* Scrollbar width */
+}
+.scrollbar_customization::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.945); /* Thumb color */
+
+  border-radius: 10px;
+}
+.scrollbar_customization::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  background: rgba(8, 105, 122, 0.842); /* Track color */
+  border-radius: 10px;
+  transition: background 0.3s ease-in-out;
+}
+
+@media (max-width: 350px) {
+  .scrollbar_customization::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 3px; /* Scrollbar width */
+  }
+}

@@ -1,0 +1,19 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        "custom-bg": "#0A192F",
+      },
+      screens: {
+        wide: "1440px",
+        laptop: { max: "1024px" },
+        tablet: { max: "900px" },
+        phoneL: { max: "500px" },
+        phoneP: { max: "390px" },
+      },
+    },
+  },
+  plugins: [],
+};
