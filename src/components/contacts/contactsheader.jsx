@@ -15,7 +15,7 @@ const ContactsHeader = () => {
         </header>
         <p
           data-aos="fade-up"
-          className="text-[18px] w-1/2 mx-auto mt-6 text-[#838996] tracking-wide  text-center laptop:text-[15px] laptop:w-[60%] tablet:w-[70%] tablet:text-[14px] phoneL:mt-2  phoneL:w-[90%] phoneL:text-[12px] phoneP:w-full phoneP:px-2 phoneP:text-[9px]"
+          className="text-[18px] w-1/2 mx-auto mt-6 text-[#838996] tracking-wide  text-center laptop:text-[15px] laptop:w-[60%] tablet:w-[70%] tablet:text-[14px] phoneL:mt-2  phoneL:w-[90%] phoneL:text-[12px] phoneP:mt-0 phoneP:w-full phoneP:px-2 phoneP:text-[9px]"
         >
           Got a question? Send me a message, and Ill get back to you soon.
         </p>

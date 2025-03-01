@@ -179,108 +179,94 @@ const SelectedPorfolio = () => {
   const details = content[id];
   const headertitle = details.title;
   return (
-    <main className="bg-[#030014]  p-[5rem]">
+    <main className="bg-[#030014]  p-[5rem] laptop:p-[4rem] tablet:p-[2rem] phoneL:p-[1rem] phoneP:p-[0.5rem]">
       <ScrollToTop />
       <NavHeader title={headertitle} />
       <AnimatedBackground />
-      <div className="main_content flex flex-col gap-[3rem] ">
-        <section className="projet_description justify-between   flex flex-1">
+      <div className="main_content flex  gap-[2rem] tablet:flex-col phoneL:flex-col ">
+        <section className="projet_description justify-between   flex flex-col flex-1">
           {/* porfolio description */}
-          <header className="flex w-[50%]  flex-col gap-7">
+          <header className="flex   flex-col gap-7">
             <div className="flex flex-col ">
-              <h1 className="text-[60px] font-bold bg-gradient-to-r from-[#2563eb] via-[#6ac8ed] to-[#67e8f9] bg-clip-text text-transparent">
+              <h1 className="text-[60px] font-bold bg-gradient-to-r from-[#2563eb] via-[#6ac8ed] to-[#67e8f9] bg-clip-text text-transparent laptop:text-[40px] tablet:text-[30px] phoneL:text-[20px] phoneP:text-[18px]">
                 {details.title}
               </h1>
-              <span className="-mt-1 h-1 w-[20%] rounded-lg bg-gradient-to-r from-white via-cyan-500 to-cyan-700"></span>
+              <span className="-mt-1 h-1 w-[20%] rounded-lg bg-gradient-to-r from-white via-cyan-500 to-cyan-700 tablet:mt-1 tablet:w-[16%] phoneL:mt-1 phoneL:w-[15%]"></span>
             </div>
-            <p className="text-[18px] font-normal text-[#BDC0C8]">
+            <p className="text-[18px] font-normal text-[#BDC0C8] laptop:text-[16px] tablet:text-[12px] phoneL:text-[11px] phoneP:text-[9/5px] ">
               {details.description}
             </p>
           </header>
-
-          {/* porfolio_preview img container */}
-          <div className="img_container   overflow-hidden  w-[45%]  rounded-2xl">
-            <img
-              src={details.port_img}
-              alt="porfolio_preview"
-              className=" object-cover  z-30 relative h-full w-full m-auto"
-            />
-          </div>
-        </section>
-
-        {/* section for the imag and the key featurs  */}
-        <section className="project_preview_img_cotainer justify-between flex-1 flex  gap-4">
-          {/* project tech summary */}
-          <div className="w-[50%]">
-            <div className=" p-4 flex gap-4    bg-gradient-to-r from-[#0C0B1E] to-cyan-700/20 rounded-2xl">
+          <div className="tablet:mt-8 phoneL:mt-5 phoneP:mt-3">
+            <div className=" p-4 flex gap-4    bg-gradient-to-r from-[#0C0B1E] to-cyan-700/20 rounded-2xl laptop:p-3 tablet:rounded-xl tablet:p-2 tablet:gap-2 phoneP:rounded-lg phoneP:p-1.5">
               {/* tech total */}
-              <div className="total z-30 flex-1 rounded-xl bg-black/30 border-cyan-700 border hover:scale-105 transition-all duration-300 flex gap-4 p-3 items-center">
-                <div className="icon bg-cyan-700/50 p-2 rounded-full">
-                  <i className="fa-solid fa-code text-[white] "></i>
+              <div className="total z-30 flex-1 rounded-xl bg-black/30 border-cyan-700 border hover:scale-105 transition-all duration-300 flex gap-4 p-3 items-center laptop:p-2 tablet:p-1 phoneL:p-0.5 phoneP:rounded-md">
+                <div className="icon bg-cyan-700/50 p-2 rounded-full laptop:px-3 tablet:py-2 phoneL:p-2 phoneL:flex phoneL:items-center phoneL:justify-center">
+                  <i className="fa-solid fa-code text-[white] laptop:text-[13px] tablet:text-[11px] phoneL:text-[10px] phoneP:text-[9px]"></i>
                 </div>
                 <div>
-                  <h2 className="text-white text-[20px] font-bold">
+                  <h2 className="text-white text-[20px] font-bold laptop:text-[18px] tablet:text-[16px] phoneL:text-[14px] phoneP:text-[12px]">
                     {details.tech_summary.total_tech}
                   </h2>
-                  <p className="text-[12px] font-normal text-[#6D7281] capitalize">
+                  <p className="text-[12px] font-normal text-[#6D7281] capitalize laptop:text-[10px] tablet:text-[8px] phoneP:text-[7px]">
                     Total technologies
                   </p>
                 </div>
               </div>
               {/* text stack */}
-              <div className="total border z-30 border-blue-700  bg-black/30 flex-1 rounded-xl hover:scale-105 transition-all duration-300 flex gap-4 p-3 items-center">
-                <div className="icon bg-blue-700/50 p-2 rounded-full">
-                  <i className="fa-solid fa-layer-group text-[white] "></i>
+              <div className="total border z-30 border-blue-700  bg-black/30 flex-1 rounded-xl hover:scale-105 transition-all duration-300 flex gap-4 p-3 items-center  laptop:p-2 phoneP:rounded-md">
+                <div className="icon bg-blue-700/50 p-2 rounded-full laptop:px-3 tablet:py-2  phoneL:p-2 phoneL:flex phoneL:items-center phoneL:justify-center">
+                  <i className="fa-solid fa-layer-group text-[white] laptop:text-[13px] tablet:text-[11px] phoneL:text-[10px] phoneP:text-[9px] "></i>
                 </div>
                 <div>
-                  <h2 className="text-white text-[20px] font-bold">
+                  <h2 className="text-white text-[20px] font-bold laptop:text-[18px] tablet:text-[16px] phoneL:text-[14px]  phoneP:text-[12px]">
                     {details.tech_summary.main_features}
                   </h2>
-                  <p className="text-[12px] font-normal text-[#6D7281] capitalize">
+                  <p className="text-[12px] font-normal text-[#6D7281] capitalize laptop:text-[10px] tablet:text-[8px] phoneP:text-[7px]">
                     main features
                   </p>
                 </div>
               </div>
             </div>
             {/* project links btn */}
-            <div className="project_link mt-6 flex gap-4  py-4">
+            <div className="project_link mt-6 flex gap-4  py-4 tablet:mt-2">
               <a href={details.live_demo} target="_blank" rel="noreferrer">
-                <button className="text-[16px] bg-gradient-to-r from-blue-700/40 to-[#93C5FD]/10  z-30 relative group overflow-hidden text-[#93C5FD] font-semibold  w-[9rem] py-3 rounded-lg">
+                <button className="text-[16px] bg-gradient-to-r from-blue-700/40 to-[#93C5FD]/10  z-30 relative group overflow-hidden text-[#93C5FD] font-semibold  w-[9rem] py-3 rounded-lg  laptop:text-[13px] tablet:py-2 tablet:w-[8rem] tablet:text-[11px] phoneL:text-[10px] phoneL:w-[7rem] phoneP:w-[6.5rem]">
                   <span className="absolute inset-0 scale-y-0 bg-[#93C5FD]/20 origin-bottom group-hover:scale-y-100 transition-all duration-300"></span>
-                  <i className="fa-solid text-[14px] group-hover:rotate-45 transition-all duration-300 text-white pr-2 fa-arrow-up-right-from-square"></i>{" "}
+                  <i className="fa-solid text-[14px] group-hover:rotate-45 transition-all duration-300 text-white pr-2 fa-arrow-up-right-from-square laptop:text-[13px] tablet:text-[12px] phoneL:text-[10px] phoneP:text-[9px] phoneP:pr-1"></i>{" "}
                   Live Demo
                 </button>
               </a>
               <a href={details.github_link} target="_blank" rel="noreferrer">
-                <button className="text-[16px] bg-gradient-to-r from-black to-cyan-700/20  z-30 relative group overflow-hidden text-cyan-500 font-semibold  w-[9rem] py-3 rounded-lg">
+                <button className="text-[16px] bg-gradient-to-r from-black to-cyan-700/20  z-30 relative group overflow-hidden text-cyan-500 font-semibold  w-[9rem] py-3 rounded-lg laptop:text-[13px] tablet:py-2 tablet:w-[8rem] tablet:text-[11px]  phoneL:text-[10px] phoneL:w-[7rem] phoneP:w-[6.5rem]">
                   <span className="absolute inset-0 scale-y-0 bg-cyan-700/20 origin-bottom group-hover:scale-y-100 transition-all duration-300"></span>
-                  <i className="fa-brands text-[18px] group-hover:rotate-45 transition-all duration-300 text-white  pr-2 fa-github"></i>{" "}
+                  <i className="fa-brands text-[18px] group-hover:rotate-45 transition-all duration-300 text-white  pr-2 fa-github laptop:text-[13px] tablet:text-[12px]  phoneL:text-[10px]  phoneP:text-[9px] phoneP:pr-1"></i>{" "}
                   Github
                 </button>
               </a>
             </div>
 
             {/* technology used  */}
-            <div className="tech_used mt-8 flex flex-col gap-7">
-              <header className="flex gap-3 items-center">
-                <i className="fa-solid fa-code text-[20px] text-[#93C5FD] "></i>
-                <h2 className="text-white capitalize text-[20px] font-semibold">
+            <div className="tech_used mt-8 flex flex-col gap-7 phoneP:gap-4">
+              <header className="flex gap-3 items-center phoneP:gap-1">
+                <i className="fa-solid fa-code text-[20px] text-[#93C5FD] tablet:text-[17px] phoneL:text-[15px] phoneP:text-[12px]"></i>
+                <h2 className="text-white capitalize text-[20px] font-semibold laptop:text-[17px] tablet:text-[15px] phoneL:text-[13px] phoneP:text-[12px]">
                   technoologies used
                 </h2>
               </header>
               {/* technologies */}
-              <div className="flex gap-4 flex-wrap z-30">
+              <div className="flex gap-4 flex-wrap z-30 tablet:gap-2">
                 {details.tech_stack.map((tech, index) => {
                   return (
                     <button
                       key={index}
-                      className="text-[#93C5FD] capitalize relative  px-5 py-3 group rounded-xl bg-gradient-to-r from-gray-500/30 to-[#93C5FD]/20  "
+                      className="text-[#93C5FD] capitalize relative  px-5 py-3 group rounded-xl bg-gradient-to-r from-gray-500/30 to-[#93C5FD]/20  laptop:px-4 laptop:py-2 laptop:text-[13px] laptop:rounded-lg tablet:text-[12px] phoneL:text-[10px] phoneP:px-2 phoneP:text-[9px]"
                     >
                       <span className="absolute inset-0 scale-x-0 bg-blue-700/20 origin-left group-hover:scale-x-100 transition-all duration-500"></span>
 
-                      <span className="pr-3 ">
-                        <i className="fa-solid text-[14px] pr-[1px] fa-angle-left"></i>
-                        <i className="fa-solid text-[14px] fa-angle-right"></i>
+                      <span className="pr-3  tablet:pr-2">
+                        <i className="fa-solid text-[14px] pr-[1px] fa-angle-left laptop:text-[13px] tablet:text-[11px] phoneL:text-[9px] phoneP:text-[8px] "></i>
+                        <i className="fa-solid text-[14px] fa-angle-right laptop:text-[13px] tablet:text-[11px] phoneL:text-[9px] phoneP:text-[8px]"></i>
                       </span>
                       {tech}
                     </button>
@@ -289,22 +275,36 @@ const SelectedPorfolio = () => {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* section for the imag and the key featurs  */}
+        <section className="project_preview_img_cotainer justify-between flex-1 flex flex-col  gap-4">
+          {/* project tech summary */}
+
+          {/* porfolio_preview img container */}
+          <div className="img_container   overflow-hidden    rounded-2xl">
+            <img
+              src={details.port_img}
+              alt="porfolio_preview"
+              className=" object-cover  z-30 relative h-full w-full m-auto"
+            />
+          </div>
 
           {/* key features  */}
-          <div className="key_faute_container border  bg-gradient-to-r from-[#0C0B1E] to-cyan-700/20 border-cyan-700 w-[45%] p-8  h-1/2 rounded-2xl hover:border-white z-20 group transition-all duration-300">
-            <h1 className=" text-[20px] text-white font-semibold capitalize">
+          <div className="key_faute_container border  bg-gradient-to-r from-[#0C0B1E] to-cyan-700/20 border-cyan-700 p-8  rounded-2xl hover:border-white z-20 group transition-all duration-300 tablet:py-5 tablet:px-3">
+            <h1 className=" text-[20px] text-white font-semibold capitalize laptop:text-[18px] tablet:text-[16px] phoneP:text-[13px]">
               <i className="fa-regular group-hover:rotate-45  transition-all duration-300 text-[#D9B016] pr-2 fa-star"></i>
               key features
             </h1>
-            <ul className="mt-2 flex flex-col gap-4 z-30 relative">
+            <ul className="mt-2 flex flex-col gap-4 z-30 relative laptop:gap-2">
               {details.key_features.map((item, index) => {
                 return (
                   <li
                     key={index}
-                    className="flex cursor-pointer  p-5 rounded-xl hover:bg-cyan-700/20 transition-all duration-300 gap-2"
+                    className="flex cursor-pointer  p-5 rounded-xl hover:bg-cyan-700/20 transition-all duration-300 gap-2 laptop:p-4 tablet:p-2 phoneP:p-1 phoneP:items-start"
                   >
-                    <i className="fa-solid text-[10px] text-cyan-700 fa-circle pt-2"></i>
-                    <p className="text-[15px] font-normal   text-[#F2F2F3]">
+                    <i className="fa-solid text-[10px] text-cyan-700 fa-circle pt-2 laptop:text-[8px] phoneP:text-[5px]"></i>
+                    <p className="text-[15px] font-normal   text-[#F2F2F3] laptop:text-[14px] tablet:text-[12px] phoneP:text-[10px]">
                       {item}
                     </p>
                   </li>

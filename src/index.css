@@ -19,3 +19,10 @@ body::-webkit-scrollbar-thumb {
   border-radius: 10px;
   transition: background 0.3s ease-in-out;
 }
+
+@media (max-width: 350px) {
+  .scrollbar_customization::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    width: 3px; /* Scrollbar width */
+  }
+}

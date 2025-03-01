@@ -11,10 +11,10 @@ const ExpericeCards = () => {
         fade="fade-down-right"
       />
       <Cards
-        num={7}
-        header="certificates"
+        num={4}
+        header="Services"
         text="Professional skills validated"
-        icon=" fa-ribbon"
+        icon=" fa-server"
         fade="fade-up"
       />
       <Cards

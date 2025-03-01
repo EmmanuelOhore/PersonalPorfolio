@@ -122,12 +122,12 @@ const Projects = () => {
             <div className="content flex flex-col gap-5">
               <h1
                 className="bg-gradient-to-tr font-bold text-[19px] from-white to-cyan-600 
-                bg-clip-text text-transparent"
+                bg-clip-text text-transparent phoneP:text-[17px]"
               >
                 {item.title}
               </h1>
 
-              <p className="text-[14px] leading-[18px] text-[#838996]">
+              <p className="text-[14px] leading-[18px] text-[#838996] phoneP:text-[12px] phoneP:leading-[15px]">
                 {item.desc}
               </p>
 
@@ -159,7 +159,7 @@ const Projects = () => {
             className="text-white z-30 text-[16px] capitalize cursor-pointer 
               px-6 py-3 border-cyan-400/30 border hover:scale-105 
               hover:bg-cyan-700/40 hover:border-cyan-300 transition-all 
-              duration-300 rounded-lg bg-cyan-700/20"
+              duration-300 rounded-lg bg-cyan-700/20 phoneP:text-[12px]  phoneP:px-4"
           >
             Show more
             <i className="fa-solid pl-2 fa-chevron-down"></i>
@@ -170,7 +170,7 @@ const Projects = () => {
             className="text-white z-30 text-[16px] capitalize cursor-pointer 
               px-6 py-3 border-cyan-400/30 border hover:scale-105 
               hover:bg-cyan-700/40 hover:border-cyan-300 transition-all 
-              duration-300 rounded-lg bg-cyan-700/20"
+              duration-300 rounded-lg bg-cyan-700/20 phoneP:text-[12px]  phoneP:px-4"
           >
             Show less
             <i className="fa-solid pl-2 fa-chevron-up"></i>

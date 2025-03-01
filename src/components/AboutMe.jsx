@@ -108,15 +108,21 @@ function AboutMe() {
             menciptakan pengalaman digital yang menarik dan selalu berusaha
             memberikan solusi terbaik dalam setiap proyek.
           </p>
-          <div className="btn-container flex gap-6 phoneP:gap-3 phoneP:mt-3">
-            <button
-              data-aos="fade-up"
-              data-aos-delay="300"
-              className=" text-white text-[16px] font-normal  py-2 px-6 rounded-md bg-gradient-to-tr from-cyan-400 to-cyan-800 flex items-center gap-2 laptop:py-3 laptop:px-4 laptop:text-[14px] phoneL:text-[13px] phoneP:p-2 phoneP:text-[12px] "
+          <div className="btn-container z-30 relative flex gap-6 phoneP:gap-3 phoneP:mt-3">
+            <a
+              href="/Ohore Emmanuel FrontEnd Devloper CV.pdf"
+              download="Ohore_Emmanuel_CV.pdf"
             >
-              <i className="fa-regular fa-file-lines laptop:text-[15px] phoneL:text-[13px]"></i>
-              Download CV
-            </button>
+              <button
+                data-aos="fade-up"
+                data-aos-delay="300"
+                className=" text-white text-[16px] font-normal  py-2 px-6 rounded-md bg-gradient-to-tr from-cyan-400 to-cyan-800 flex items-center gap-2 laptop:py-3 laptop:px-4 laptop:text-[14px] phoneL:text-[13px] phoneP:p-2 phoneP:text-[12px] "
+              >
+                <i className="fa-regular fa-file-lines laptop:text-[15px] phoneL:text-[13px]"></i>
+                Download CV
+              </button>
+            </a>
+
             <button
               onClick={() => handlescroll("portfolio")}
               data-aos="fade-up"

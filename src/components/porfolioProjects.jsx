@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Projects from "../ui/projects";
 import TechStack from "../ui/techStack";
+import Services from "../ui/services";
 
-const Certificates = () => <h1 className="text-white">Certificates Section</h1>;
 const PortfolioProjects = () => {
   const [selected, setselcted] = useState("Projects");
   const handlechange = (text) => {
@@ -16,8 +16,8 @@ const PortfolioProjects = () => {
     },
     {
       id: 2,
-      icon: "fa-award",
-      text: "Certificates",
+      icon: "fa-server",
+      text: "Services",
     },
     {
       id: 3,
@@ -64,8 +64,8 @@ const PortfolioProjects = () => {
       <div className="mt-10 w-full">
         {selected === "Projects" ? (
           <Projects />
-        ) : selected === "Certificates" ? (
-          <Certificates />
+        ) : selected === "Services" ? (
+          <Services />
         ) : selected === "Techstack" ? (
           <TechStack />
         ) : null}
