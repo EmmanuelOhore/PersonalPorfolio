@@ -13,7 +13,7 @@ const TypewriteText = ({ input }) => {
           setDisplayText(input.slice(0, index));
           index++;
         }
-      }, 200);
+      }, 100);
       return () => clearInterval(Timer);
     }
   }, [input]);
@@ -22,9 +22,15 @@ const TypewriteText = ({ input }) => {
     <div className="flex items-center  justify-center gap-2 ">
       <i className="fa-solid fa-globe text-[19px]  bg-gradient-to-tr from-white to-cyan-900 bg-clip-text text-transparent"></i>
       <span className="  bg-gradient-to-t  from-white  to-cyan-100/20 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]">
-        <h1 className="   font-semibold leading-[32px] text-[20px] capitalize laptop:text-[18px] tablet:tablet:text-[16px] phoneL:text-[14px] phoneP:text-[12px]">
-          {displayText}
-        </h1>
+        <a
+          href="https://personal-porfolio-xb9t.vercel.app/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <h1 className="   font-semibold leading-[32px] text-[20px] capitalize laptop:text-[18px] tablet:tablet:text-[16px] phoneL:text-[14px] phoneP:text-[12px]">
+            {displayText}
+          </h1>
+        </a>
       </span>
     </div>
   );

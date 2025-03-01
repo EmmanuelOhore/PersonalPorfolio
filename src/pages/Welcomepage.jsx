@@ -126,7 +126,9 @@ const WelcomePage = ({ onLoadComplete }) => {
                   className="icon_container relative flex justify-center gap-7 w-fit mx-auto"
                 >
                   <div className="absolute -inset-3 bg-gradient-to-r from-cyan-500/30 animate-pulse to-cyan-700/50 rounded-full blur opacity-30 group-hover:opacity-75 transition duration-300" />
-                  <TypewriteText input={"This is my portfolio"} />
+                  <TypewriteText
+                    input={"https://personal-porfolio-xb9t.vercel.app/"}
+                  />
                 </motion.div>
               </section>
             </main>
