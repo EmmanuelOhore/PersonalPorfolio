@@ -11,9 +11,13 @@ const NavBar = () => {
     <>
       <nav className="flex px-16 flex-wrap items-center  py-4 bg-[#030014] laptop:px-8  tablet:px-4">
         <div className="logo">
-          <h1 className="text-[2rem] font-extrabold bg-gradient-to-r from-white via-cyan-200 to-cyan-500 bg-clip-text text-transparent">
-            Logo
-          </h1>
+          <div className="text-[2rem] font-extrabold bg-gradient-to-r from-white via-cyan-00 to-cyan-700  w-[4rem] h-[2rem] laptop:h-[2rem] laptop:w-[2.5rem] phoneL:h-[1.5rem] phoneL:w-[1.5rem] justify-center flex rounded-full *:">
+            <img
+              src="/lio.png"
+              alt="logo"
+              className=" object-cover rounded-full"
+            />
+          </div>
         </div>
         <div className="navlinks ml-auto mr-[7rem] laptop:mr-[2rem] tablet:mr-0 phoneL:hidden">
           <ul className="flex gap-6 text-white z-30 relative ">
