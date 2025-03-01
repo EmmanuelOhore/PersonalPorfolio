@@ -92,7 +92,7 @@ const Commects = () => {
       console.log("Error uploading file: ", error.message);
     }
   };
-
+  const MAX_CHAR_LIMIT = 200;
   return (
     <main className="bg-gradient-to-tr from-cyan-800/10 via-cyan-300/10 to-cyan-700/10 flex-1 rounded-[2rem] p-6 laptop:p-3 phoneL:rounded-[1rem] phoneP:p-1">
       <section
@@ -150,7 +150,11 @@ const Commects = () => {
               type="text"
               required
               value={message}
-              onChange={(e) => setMessage(e.target.value)}
+              onChange={(e) => {
+                if (e.target.value.length <= MAX_CHAR_LIMIT) {
+                  setMessage(e.target.value);
+                }
+              }}
               name="message"
               id="name"
               placeholder="Enter Your messge here..."
